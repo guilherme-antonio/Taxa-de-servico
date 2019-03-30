@@ -5,10 +5,13 @@ import android.os.Bundle;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
+import java.text.NumberFormat;
+
 public class MainActivity extends AppCompatActivity {
 
     SeekBar seekBar;
     TextView textView;
+    NumberFormat formatacaoPercentual = NumberFormat.getPercentInstance();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +43,6 @@ public class MainActivity extends AppCompatActivity {
     public void sincronizaTextView(){
         int valor = seekBar.getProgress();
 
-        this.textView.setText(String.format("%d%%", valor));
+        this.textView.setText(formatacaoPercentual.format(Double.valueOf(valor)/100));
     }
 }
