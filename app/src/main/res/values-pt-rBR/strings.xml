@@ -2,4 +2,6 @@
 <resources>
     <string name="app_name">Taxa de Servico</string>
     <string name="porcentagem_inicial">1%</string>
+    <string name="tax">Taxa:</string>
+    <string name="total">Total:</string>
 </resources>
